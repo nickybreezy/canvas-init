@@ -26,10 +26,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>Next.js App in Canvas</h1>
+    <h1>Next.js App in Canvas (launcher with netlify below shows page.js)</h1>
     <iframe 
       id="nextjs-iframe"
-      src="http://localhost:3006/" 
+      src="https://canvastestduo.netlify.app/" 
       allowfullscreen
       allow="microphone; camera; geolocation">
     </iframe>
@@ -38,7 +38,7 @@
   <script>
     // You can add JavaScript here to handle communication between Canvas and your app
     window.addEventListener('message', function(event) {
-      if (event.origin === 'http://localhost:3006/') {
+      if (event.origin === 'https://canvastestduo.netlify.app/') {
         // Handle messages from your Next.js app
         console.log('Message from Next.js app:', event.data);
       }

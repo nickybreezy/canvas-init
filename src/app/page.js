@@ -1,8 +1,8 @@
 const Home = () => {
   return (
     <div>
-      <h1>Hello, Next.js World!</h1>
-      <iframe src="https://canvas-test-nickybreezy-nickybreezys-projects.vercel.app" width="600" height="400"></iframe>
+      <h1>Hello, Next.js World! this is the home page</h1>
+     
     </div>
   );
 };

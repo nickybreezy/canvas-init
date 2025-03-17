@@ -6,22 +6,22 @@ export default function ChapterSummary() {
   return (
     <div className="h-screen w-screen overflow-hidden bg-white flex flex-col p-4 sm:p-6 md:p-8">
       {/* Title */}
-      <div className="text-center mb-4 sm:mb-6 md:mb-8">
+      <div className="text-center mb-2 sm:mb-4">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Chapter Summary</h1>
       </div>
       
-      {/* Cards Container - Using flex-grow to take available space */}
-      <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 flex-grow">
+      {/* Cards Container - Limiting height with overflow */}
+      <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 max-h-[70vh]">
         {/* Card 1 */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden flex-1 w-full flex flex-col">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden flex-1 w-full flex flex-col max-h-full">
           {/* Orange Header */}
-          <div className="bg-orange-500 p-3">
+          <div className="bg-orange-500 p-2 md:p-3">
             <h2 className="text-lg md:text-xl font-semibold text-center text-white">Key Learnings</h2>
           </div>
           
-          {/* Card Content with Two Tiles - Using flex-grow to take available space */}
-          <div className="p-3 md:p-4 flex-grow flex flex-col">
-            <div className="grid grid-cols-2 gap-3 flex-grow">
+          {/* Card Content with Two Tiles - Adding overflow auto */}
+          <div className="p-2 md:p-4 flex-grow flex flex-col overflow-auto">
+            <div className="grid grid-cols-2 gap-3">
               {/* Tile 1 */}
               <div className="bg-gray-100 p-2 md:p-3 rounded-md flex flex-col">
                 <h3 className="font-medium text-center text-gray-800 mb-1 text-sm md:text-base">What is Anonymization?</h3>
@@ -42,16 +42,16 @@ export default function ChapterSummary() {
         </div>
         
         {/* Card 2 */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden flex-1 w-full flex flex-col">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden flex-1 w-full flex flex-col max-h-full">
           {/* Orange Header */}
-          <div className="bg-orange-500 p-3">
+          <div className="bg-orange-500 p-2 md:p-3">
             <h2 className="text-lg md:text-xl font-semibold text-center text-white">Score</h2>
           </div>
           
-          {/* Card Content */}
-          <div className="p-3 md:p-4 flex-grow flex flex-col justify-between">
+          {/* Card Content - Adding overflow auto */}
+          <div className="p-2 md:p-4 flex-grow flex flex-col justify-between overflow-auto">
             {/* 5 Stars */}
-            <div className="flex justify-center mb-3 md:mb-4 text-yellow-500">
+            <div className="flex justify-center mb-2 md:mb-3 text-yellow-500">
               <FaStar className="mx-1 text-lg md:text-xl" />
               <FaStar className="mx-1 text-lg md:text-xl" />
               <FaStar className="mx-1 text-lg md:text-xl" />
@@ -60,7 +60,7 @@ export default function ChapterSummary() {
             </div>
             
             {/* Progress Bar */}
-            <div className="mb-3 md:mb-4 relative">
+            <div className="mb-2 md:mb-3 relative">
               <div className="w-full bg-gray-200 rounded-full h-6 md:h-8">
                 <div className="bg-green-500 h-6 md:h-8 rounded-full" style={{ width: '78%' }}></div>
                 <div className="absolute inset-0 flex items-center justify-center text-xs md:text-sm font-medium">
@@ -78,7 +78,7 @@ export default function ChapterSummary() {
       </div>
       
       {/* Buttons Container */}
-      <div className="flex justify-between mt-4 sm:mt-6 md:mt-8">
+      <div className="flex justify-between mt-2 sm:mt-4 md:mt-6">
         {/* Button 1 */}
         <div>
           <Link href="/">   

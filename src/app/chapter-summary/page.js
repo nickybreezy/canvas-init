@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaChevronCircleRight, FaStar, FaHome } from 'react-icons/fa';
-
+import Link from 'next/link';
 export default function ChapterSummary() {
   return (
     <div className="min-h-screen bg-white flex flex-col p-8">
@@ -80,15 +80,18 @@ export default function ChapterSummary() {
       <div className="flex flex-col md:flex-row justify-between mt-auto">
         {/* Button 1 */}
         <div className="mb-4 md:mb-0">
-          <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+        <Link href="/">   
+        <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
 
            <FaHome className="inline-block mr-5 ml-5" />
           </button>
+        </Link>
+       
         </div>
         
         {/* Button 2 */}
         <div>
-          <button className="bg-orange-500  text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+          <button className="bg-orange-500  text-white px-6 py-2 rounded-full hover:bg-orange-700 transition-colors">
           <FaChevronCircleRight className="inline-block mr-5 ml-5" />
           </button>
         </div>
